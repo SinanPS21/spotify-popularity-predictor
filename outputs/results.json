@@ -1,0 +1,237 @@
+{
+  "shape": [
+    603,
+    14
+  ],
+  "dtypes": {
+    "title": "str",
+    "artist": "str",
+    "genre": "str",
+    "year": "int64",
+    "tempo": "int64",
+    "energy": "int64",
+    "danceability": "int64",
+    "loudness": "int64",
+    "liveness": "int64",
+    "valence": "int64",
+    "duration": "int64",
+    "acousticness": "int64",
+    "speechiness": "int64",
+    "popularity": "int64"
+  },
+  "describe": {
+    "year": {
+      "count": 603.0,
+      "mean": 2014.59,
+      "std": 2.61,
+      "min": 2010.0,
+      "25%": 2013.0,
+      "50%": 2015.0,
+      "75%": 2017.0,
+      "max": 2019.0
+    },
+    "tempo": {
+      "count": 603.0,
+      "mean": 118.55,
+      "std": 24.8,
+      "min": 0.0,
+      "25%": 100.0,
+      "50%": 120.0,
+      "75%": 129.0,
+      "max": 206.0
+    },
+    "energy": {
+      "count": 603.0,
+      "mean": 70.5,
+      "std": 16.31,
+      "min": 0.0,
+      "25%": 61.0,
+      "50%": 74.0,
+      "75%": 82.0,
+      "max": 98.0
+    },
+    "danceability": {
+      "count": 603.0,
+      "mean": 64.38,
+      "std": 13.38,
+      "min": 0.0,
+      "25%": 57.0,
+      "50%": 66.0,
+      "75%": 73.0,
+      "max": 97.0
+    },
+    "loudness": {
+      "count": 603.0,
+      "mean": -5.58,
+      "std": 2.8,
+      "min": -60.0,
+      "25%": -6.0,
+      "50%": -5.0,
+      "75%": -4.0,
+      "max": -2.0
+    },
+    "liveness": {
+      "count": 603.0,
+      "mean": 17.77,
+      "std": 13.1,
+      "min": 0.0,
+      "25%": 9.0,
+      "50%": 12.0,
+      "75%": 24.0,
+      "max": 74.0
+    },
+    "valence": {
+      "count": 603.0,
+      "mean": 52.23,
+      "std": 22.51,
+      "min": 0.0,
+      "25%": 35.0,
+      "50%": 52.0,
+      "75%": 69.0,
+      "max": 98.0
+    },
+    "duration": {
+      "count": 603.0,
+      "mean": 224.67,
+      "std": 34.13,
+      "min": 134.0,
+      "25%": 202.0,
+      "50%": 221.0,
+      "75%": 239.5,
+      "max": 424.0
+    },
+    "acousticness": {
+      "count": 603.0,
+      "mean": 14.33,
+      "std": 20.77,
+      "min": 0.0,
+      "25%": 2.0,
+      "50%": 6.0,
+      "75%": 17.0,
+      "max": 99.0
+    },
+    "speechiness": {
+      "count": 603.0,
+      "mean": 8.36,
+      "std": 7.48,
+      "min": 0.0,
+      "25%": 4.0,
+      "50%": 5.0,
+      "75%": 9.0,
+      "max": 48.0
+    },
+    "popularity": {
+      "count": 603.0,
+      "mean": 66.52,
+      "std": 14.52,
+      "min": 0.0,
+      "25%": 60.0,
+      "50%": 69.0,
+      "75%": 76.0,
+      "max": 99.0
+    }
+  },
+  "n_unique_artists": 184,
+  "n_unique_genres": 50,
+  "n_duplicated_titles": 19,
+  "missing_values": 0,
+  "corr_with_popularity": {
+    "year": 0.241,
+    "loudness": 0.157,
+    "danceability": 0.116,
+    "valence": 0.039,
+    "acousticness": 0.027,
+    "tempo": 0.019,
+    "speechiness": -0.041,
+    "energy": -0.058,
+    "liveness": -0.076,
+    "duration": -0.104
+  },
+  "rows_dropped_outliers": 5,
+  "n_genre_groups": 12,
+  "train_size": 478,
+  "test_size": 120,
+  "n_features": 22,
+  "model_results": {
+    "Linear Regression": {
+      "best_params": {},
+      "RMSE": 12.967,
+      "MAE": 9.71,
+      "R2": 0.066
+    },
+    "Ridge": {
+      "best_params": {
+        "alpha": 50.0
+      },
+      "RMSE": 13.123,
+      "MAE": 9.911,
+      "R2": 0.043
+    },
+    "Lasso": {
+      "best_params": {
+        "alpha": 0.1
+      },
+      "RMSE": 13.108,
+      "MAE": 9.971,
+      "R2": 0.046
+    },
+    "KNN": {
+      "best_params": {
+        "n_neighbors": 11,
+        "weights": "distance"
+      },
+      "RMSE": 13.475,
+      "MAE": 10.03,
+      "R2": -0.009
+    },
+    "SVR": {
+      "best_params": {
+        "C": 10,
+        "epsilon": 1.0,
+        "kernel": "rbf"
+      },
+      "RMSE": 13.265,
+      "MAE": 9.767,
+      "R2": 0.023
+    },
+    "Decision Tree": {
+      "best_params": {
+        "max_depth": 3,
+        "min_samples_leaf": 3
+      },
+      "RMSE": 13.059,
+      "MAE": 9.922,
+      "R2": 0.053
+    },
+    "Random Forest": {
+      "best_params": {
+        "max_depth": 5,
+        "min_samples_leaf": 3,
+        "n_estimators": 100
+      },
+      "RMSE": 13.156,
+      "MAE": 9.888,
+      "R2": 0.039
+    },
+    "AdaBoost": {
+      "best_params": {
+        "learning_rate": 0.05,
+        "n_estimators": 50
+      },
+      "RMSE": 13.147,
+      "MAE": 10.023,
+      "R2": 0.04
+    },
+    "GradientBoosting": {
+      "best_params": {
+        "learning_rate": 0.05,
+        "max_depth": 2,
+        "n_estimators": 100
+      },
+      "RMSE": 13.058,
+      "MAE": 9.716,
+      "R2": 0.053
+    }
+  },
+  "best_model": "Linear Regression"
+}
